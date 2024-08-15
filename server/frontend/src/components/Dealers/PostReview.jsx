@@ -27,7 +27,7 @@ const PostReview = () => {
     if(name.includes("null")) {
       name = sessionStorage.getItem("username");
     }
-    if(!model || review === "" || date === "" || year === "" || model === "") {
+    if(review === "" || date === "" || year === "" ) {
       alert("All details are mandatory")
       return;
     }
@@ -42,7 +42,7 @@ const PostReview = () => {
       "review": review,
       "purchase": true,
       "purchase_date": date,
-      "car_make": make_chosen,
+      "car_make": "Nissan",
       "car_model": model_chosen,
       "car_year": year,
     });
